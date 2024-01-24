@@ -69,11 +69,11 @@
     display: inline-flex; /* чтобы изображение и текст были в одной линии */
     align-items: center; /* выравнивание элементов по центру */
     justify-content: center; /* выравнивание элементов по центру */
-    font-size: 8px;
+    font-size: 9px;
     cursor: pointer;
     padding: 5px 5px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
     border-radius: 10px;
-    width: 60px; /* уменьшим ширину кнопок */
+    width: 75px; /* ширину кнопок */
   }
   
   .bottom-menu button img {
