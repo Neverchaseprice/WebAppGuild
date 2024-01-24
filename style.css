@@ -1,5 +1,28 @@
  /* Основной CSS */
 
+  
+    /* Reset стандартных стилей браузера для более предсказуемого отображения */
+    * {
+    box-sizing: border-box;
+    margin: 10;
+    padding: 20;
+}
+
+/*Выделение текста мышкой*/
+::selection {
+    background: #0f2714ec; /* Safari */
+    color: white; /* For selecting text color */
+}
+::-moz-selection {
+    background: #0f2714ec; /* Firefox */
+    color: white; /* For selecting text color */
+}
+::-ms-selection {
+    background: #0f2714ec; /* Firefox */
+    color: white; /* For selecting text color */
+}
+
+
  body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,63 +47,53 @@
   }
   
   .bottom-menu {
+    position: fixed; /* Зафиксировать кнопки внизу при прокрутке */
+    bottom: 0;
+    left: 50%; /* Помещаем в середину */
+    transform: translateX(-50%); /* Центрируем горизонтально */
     width: 100%;
     max-width: 600px; /* Максимальная ширина 600px */
     background-color: #f2f2f2;
     display: flex;
-    justify-content: space-evenly; /* равномерное расределение кнопок */
+    justify-content: space-evenly; /* равномерное распределение кнопок */
     padding: 10px 0;
+    z-index: 1000; /* Позволяет кнопкам оставаться поверх другого контента */
   }
   
   .bottom-menu button {
-    background-color: #133d14;
+    background-color: #102727;
     color: white;
     border: none;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex; /* чтобы изображение и текст были в одной линии */
+    align-items: center; /* выравнивание элементов по центру */
+    justify-content: center; /* выравнивание элементов по центру */
     font-size: 14px;
-    margin: 0; /* Убираем внешние отступы */
     cursor: pointer;
-    padding: 10px; /* Уменьшаем внутренние отступы */
-    border-radius: 5px;
-    width: 100px; /* Фиксированная ширина кнопок */
+    padding: 5px 10px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
+    border-radius: 10px;
+    width: 110px; /* уменьшим ширину кнопок */
   }
   
+  .bottom-menu button img {
+    margin-right: 5px; /* уменьшим отступ между изображением и текстом */
+    height: 30px; /* установим высоту изображений */
+    width: 30px; /* установим ширину изображений */
+  }
+  
+
   /* Медиа-запрос для мобильных устройств */
   @media (max-width: 600px) {
     .container {
-      padding: 10px; /* Уменьшаем отступы для мобильных устройств */
+      max-width: 100%; /* Устанавливаем максимальную ширину для мобильных устройств */
     }
   
-    .bottom-menu {
-      position: fixed; /* Зафиксировать кнопки внизу при прокрутке */
-      bottom: 0;
-      left: 50%; /* Помещаем в середину */
-      transform: translateX(-50%); /* Центрируем горизонтально */
+    .about, .services, .membership {
+      max-width: 100%; /* Устанавливаем максимальную ширину для мобильных устройств */
+      padding: 0 10px; /* Уменьшаем отступы для мобильных устройств */
     }
   }
-  
-      /* Reset стандартных стилей браузера для более предсказуемого отображения */
-      * {
-        box-sizing: border-box;
-        margin: 10;
-        padding: 20;
-    }
-
-    /*Выделение текста мышкой*/
-    ::selection {
-        background: #0f2714ec; /* Safari */
-        color: white; /* For selecting text color */
-    }
-    ::-moz-selection {
-        background: #0f2714ec; /* Firefox */
-        color: white; /* For selecting text color */
-    }
-    ::-ms-selection {
-        background: #0f2714ec; /* Firefox */
-        color: white; /* For selecting text color */
-    }
 
     /*Дизайн элементов*/
     body {
@@ -89,6 +102,7 @@
         background-color: #f4f4f4; /* Светло-серый фон */
         color: #333; /* Темный текст */
     }
+
 
     header { 
         background-color: #102727; /* Темно-зеленый фон для шапки */
