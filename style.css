@@ -52,7 +52,7 @@
     left: 50%; /* Помещаем в середину */
     transform: translateX(-50%); /* Центрируем горизонтально */
     width: 100%;
-    max-width: 600px; /* Максимальная ширина 600px */
+    max-width: 500px; /* Максимальная ширина 600px */
     background-color: #f2f2f2;
     display: flex;
     justify-content: space-evenly; /* равномерное распределение кнопок */
@@ -69,19 +69,19 @@
     display: inline-flex; /* чтобы изображение и текст были в одной линии */
     align-items: center; /* выравнивание элементов по центру */
     justify-content: center; /* выравнивание элементов по центру */
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
     padding: 5px 10px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
     border-radius: 10px;
-    width: 110px; /* уменьшим ширину кнопок */
+    width: 90px; /* уменьшим ширину кнопок */
   }
   
   .bottom-menu button img {
     margin-right: 5px; /* уменьшим отступ между изображением и текстом */
-    height: 30px; /* установим высоту изображений */
-    width: 30px; /* установим ширину изображений */
+    height: 20px; /* установим высоту изображений */
+    width: 20px; /* установим ширину изображений */
   }
-  
+ 
 
   /* Медиа-запрос для мобильных устройств */
   @media (max-width: 600px) {
@@ -147,7 +147,6 @@
         margin: 0 auto;
         display: block; /* Делает изображение блочным элементом */
         margin: 0 auto; /* Центрирует изображение по горизонтали */
-        
     }
 
     .centered-image {
