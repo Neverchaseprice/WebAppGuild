@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    width: 300px; /* изменение ширины всего элемента-переключателя */
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .toggle-handle {
+    width: 150px; 
+    height: 30px;
+    border-radius: 15px; /* изменение радиуса скругления углов */
+    background-color: #fff;
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .info {
+    display: none;
+    text-align: center;
+  }
+  
+  #switch:checked+.toggle .toggle-handle {
+    transform: translateX(100%);
+  }
+  
+  #switch:checked~#guildInfo {
+    display: none;
+  }
+  
+  #switch:checked~#achievementInfo {
+    display: block;
+  }
+
+  .switch-text-left, .switch-text-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #555;
+    display: inline-block; /* Размещение текста внутри label в виде блока */
+  }
+  
+  .switch-text-left {
+    left: 25%; /* Положение "Гильдейцы" с левой стороны */
+    transform: translateX(-50%) translateY(-50%); /* Центрирование "Гильдейцы" по горизонтали и вертикали */
+  }
+  
+  .switch-text-right {
+    right: 25%; /* Положение "Достижения" с правой стороны */
+    transform: translateX(50%) translateY(-50%); /* Центрирование "Достижения" по горизонтали и вертикали */
+  }
+
+
+
+
+
+  /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
+  /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */  
+    /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
+      /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
+        /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
+          /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
+
+
+            .bottom-menu {
+            position: fixed; /* Зафиксировать кнопки внизу при прокрутке */
+            bottom: 0;
+            left: 50%; /* Помещаем в середину */
+            transform: translateX(-50%); /* Центрируем горизонтально */
+            width: 100%;
+            max-width: 500px; /* Максимальная ширина 600px */
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-evenly; /* равномерное распределение кнопок */
+            padding: 10px 0;
+            z-index: 1000; /* Позволяет кнопкам оставаться поверх другого контента */
+            }
+            
+            .bottom-menu button {
+            background-color: #102727;
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-flex; /* чтобы изображение и текст были в одной линии */
+            align-items: center; /* выравнивание элементов по центру */
+            justify-content: center; /* выравнивание элементов по центру */
+            font-size: 9px;
+            cursor: pointer;
+            padding: 5px 5px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
+            border-radius: 10px;
+            width: 75px; /* ширину кнопок */
+            }
+            
+            .bottom-menu button img {
+            margin-right: 5px; /* уменьшим отступ между изображением и текстом */
+            height: 20px; /* установим высоту изображений */
+            width: 20px; /* установим ширину изображений */
+            }
+            
