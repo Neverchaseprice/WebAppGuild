@@ -9,6 +9,17 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
   }
+
+  .slidecontainer {
+    position: fixed; /* позиционируем постоянно */
+    left: 20px; /* изначальная позиция слева */
+    top: 50%; /* размещаем сверху на 50% высоты окна */
+    z-index: 1001; /* позволяет элементу оставаться поверх других */
+    transition: left 0.3s; /* добавляем плавное анимирование при изменении позиции */
+}
+
+/* другие стили */
+
   
   .toggle-switch {
     position: relative;
@@ -45,7 +56,7 @@ body {
   
   .info {
     display: none;
-    text-align: center;
+    text-align: left;
   }
   
   #switch:checked+.toggle .toggle-handle {
@@ -81,8 +92,6 @@ body {
 
 
 
-
-
   /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
   /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */  
     /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
@@ -91,7 +100,7 @@ body {
           /* Часть для Кнопок ВНИЗУ - РЕФАКТОРИНГ */
 
 
-            .bottom-menu {
+          .bottom-menu {
             position: fixed; /* Зафиксировать кнопки внизу при прокрутке */
             bottom: 0;
             left: 50%; /* Помещаем в середину */
@@ -106,24 +115,29 @@ body {
             }
             
             .bottom-menu button {
-            background-color: #102727;
-            color: white;
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            display: inline-flex; /* чтобы изображение и текст были в одной линии */
-            align-items: center; /* выравнивание элементов по центру */
-            justify-content: center; /* выравнивание элементов по центру */
-            font-size: 9px;
-            cursor: pointer;
-            padding: 5px 5px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
-            border-radius: 10px;
-            width: 75px; /* ширину кнопок */
-            }
+                background-color: #102727;
+                color: white;
+                border: none;
+                text-align: center;
+                text-decoration: none;
+                display: flex; /* Использовать flexbox */
+                flex-direction: column; /* рассположение элементов по вертикали */
+                align-items: center; /* выравнивание элементов по центру */
+                justify-content: center; /* выравнивание элементов по центру */
+                font-size: 9px;
+                cursor: pointer;
+                padding: 5px 5px;
+                border-radius: 10px;
+                width: 70px; /* задаем фиксированную ширину кнопок */
+                height: 45px; /* задаем фиксированную высоту кнопок */
+              }
+              
+              .bottom-menu button img {
+                margin-bottom: 5px; /* добавляем отступ снизу для размещения иконки поверх текста */
+                height: 20px;
+                width: 20px;
+              }
             
-            .bottom-menu button img {
-            margin-right: 5px; /* уменьшим отступ между изображением и текстом */
-            height: 20px; /* установим высоту изображений */
-            width: 20px; /* установим ширину изображений */
+            .bottom-menu a {
+                text-decoration: none; /* убираем подчеркивание текста на ссылках внутри .bottom-menu */
             }
-            
