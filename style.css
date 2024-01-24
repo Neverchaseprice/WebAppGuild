@@ -1,0 +1,153 @@
+ /* Основной CSS */
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* чтобы кнопки не перекрывали контент */
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #333; /* Темный текст */
+    max-width: 600px; /* Максимальная ширина страницы */
+    margin: 0 auto; /* Центрирование страницы по горизонтали */
+  }
+  
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .bottom-menu {
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина 600px */
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly; /* равномерное расределение кнопок */
+    padding: 10px 0;
+  }
+  
+  .bottom-menu button {
+    background-color: #133d14;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0; /* Убираем внешние отступы */
+    cursor: pointer;
+    padding: 10px; /* Уменьшаем внутренние отступы */
+    border-radius: 5px;
+    width: 100px; /* Фиксированная ширина кнопок */
+  }
+  
+  /* Медиа-запрос для мобильных устройств */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px; /* Уменьшаем отступы для мобильных устройств */
+    }
+  
+    .bottom-menu {
+      position: fixed; /* Зафиксировать кнопки внизу при прокрутке */
+      bottom: 0;
+      left: 50%; /* Помещаем в середину */
+      transform: translateX(-50%); /* Центрируем горизонтально */
+    }
+  }
+  
+      /* Reset стандартных стилей браузера для более предсказуемого отображения */
+      * {
+        box-sizing: border-box;
+        margin: 10;
+        padding: 20;
+    }
+
+    /*Выделение текста мышкой*/
+    ::selection {
+        background: #0f2714ec; /* Safari */
+        color: white; /* For selecting text color */
+    }
+    ::-moz-selection {
+        background: #0f2714ec; /* Firefox */
+        color: white; /* For selecting text color */
+    }
+    ::-ms-selection {
+        background: #0f2714ec; /* Firefox */
+        color: white; /* For selecting text color */
+    }
+
+    /*Дизайн элементов*/
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        background-color: #f4f4f4; /* Светло-серый фон */
+        color: #333; /* Темный текст */
+    }
+
+    header { 
+        background-color: #102727; /* Темно-зеленый фон для шапки */
+        color: #FFF; /* Белый текст */
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header p {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 10px;
+        margin: 20px 0; 
+    }
+
+    .about {
+        background-color: #FFF; /* Белый фон для раздела "О нас" */
+        max-width: 1100px; /* Здесь можно задать любое желаемое значение */
+        margin: 0 auto; /* Центрирует блок по горизонтали */
+        padding: 1px 10px; /* Оступы сверху/снизу 20px, слева/справа 30px */
+        border-radius: 15px; /* Добавляем закругление краев */
+        background-color: #FFF; /* Установим цвет фона для отличия блока от остального контента */
+    }
+        
+
+    .services, .membership {
+        background-color: #e6e6e6; /* Светло-серый фон для других разделов */
+        max-width: 1100px; /* Здесь можно задать любое желаемое значение */
+        margin: 0 auto; /* Центрирует блок по горизонтали */
+        padding: 0 20px; /* Добавляет отступы, чтобы контент не касался краев окна браузера */
+    }
+
+    .GeneralText{
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        display: block; /* Делает изображение блочным элементом */
+        margin: 0 auto; /* Центрирует изображение по горизонтали */
+        
+    }
+
+    .centered-image {
+        display: block; /* Делает изображение блочным элементом */
+        margin: 0 auto; /* Центрирует изображение по горизонтали */
+    }
+    
+
+    footer {
+        background-color: #102727; /* Темно-зеленый фон для подвала */
+        color: #FFF; /* Белый текст */
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;  /* Помещаем подвал внизу страницы */
+        bottom: 0;  /* Размещаем подвал внизу страницы */
+        width: 100%; /* Обеспечиваем ширину подвала на всю ширину страницы */
+      }
