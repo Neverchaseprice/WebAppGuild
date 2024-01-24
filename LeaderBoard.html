@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    
 <div class="toggle-switch">
   <input type="checkbox" id="switch" class="checkbox" />
   <label for="switch" class="toggle">
@@ -19,57 +19,78 @@
   </label>
 </div>
 
-  <div id="guildInfo" class="info visible">
+  <div id="achievementInfo" class="info visible">
     <!-- Контент для "Гильдейцы" -->
     <h1>Информация о гильдейцах</h1>
-    <p>Здесь будет отображаться информация о гильдейцах.</p>
+    <p>Здесь будет отображаться информация о гильдейцах. </p>
+    <p>Ранжирование происходит на основе очков TRUST Подробнее:  </p>
+
   </div>
 
-  <div id="achievementInfo" class="info">
+  <div id="guildInfo" class="info">
     <!-- Контент для "Достижения" -->
-    <h1>Информация о достижениях</h1>
+    <h1>Недавние Достижения</h1>
     <p>Здесь будет отображаться информация о достижениях.</p>
   </div>
 
   <!-- ... предыдущий HTML код ... -->
 
-<div id="guildNames" class="info">
+<div id="achievementProjects" class="info">
     <!-- Список из 5 имен для "Гильдейцы" -->
     <h2>Имена гильдейцев</h2>
     <ul>
-      <li>Имя 1</li>
-      <li>Имя 2</li>
-      <li>Имя 3</li>
-      <li>Имя 4</li>
-      <li>Имя 5</li>
+      <li>ФИО, Аватар, Титул, TRUST POINTS</li>
+      <li>ФИО, Аватар, Титул, TRUST POINTS</li>
+      <li>ФИО, Аватар, Титул, TRUST POINTS</li>
+      <li>ФИО, Аватар, Титул, TRUST POINTS</li>
+      <li>ФИО, Аватар, Титул, TRUST POINTS</li>
     </ul>
   </div>
   
-  <div id="achievementProjects" class="info">
+  <div id="guildNames" class="info">
     <!-- Список из 10 инвестиционных проектов для "Достижения" -->
     <h2>Инвестиционные проекты</h2>
     <ul>
-      <li>Проект 1</li>
-      <li>Проект 2</li>
-      <li>Проект 3</li>
-      <li>Проект 4</li>
-      <li>Проект 5</li>
-      <li>Проект 6</li>
-      <li>Проект 7</li>
-      <li>Проект 8</li>
-      <li>Проект 9</li>
-      <li>Проект 10</li>
+      <li>СРНХ</li>
+      <br>
+      <li>Пошив функционального оборудования</li>
+      <br>
+    </ul>
+
+    <h2>Активы</h2>
+    <ul>
+        <li>ИИ-решения для отделов продаж</li>
+        <br>
+        <li>Технополюс</li>
+        <br>
+        <li>Трансферная Судоходная Компания</li>
+        <br>
+        <li>Развитие Гильдии</li>
+        <br>
+        <li>Строительство ЦОДов</li>
+        <br> 
     </ul>
   </div>
 
   <div class="bottom-menu">
     <a href="index.html"><button><img src="images/Icon1.png" alt="Домой"> Главная </button></a>
-    <a href="https://neverchaseprice.github.io/SiteTests1/MemberForm.html"><button><img src="images/Icon1.png" alt="Профиль"> Личный кабинет</button></a>
+    <a href="https://neverchaseprice.github.io/SiteTests1/MemberForm.html"><button><img src="images/Icon1.png" alt="Профиль"> Кабинет</button></a>
     <a href="https://neverchaseprice.github.io/SiteTests1/GuildPro.html"><button><img src="images/Icon1.png" alt="Портфель"> Портфель</button></a>
     <a href="LeaderBoard.html"><button><img src="images/Icon1.png" alt="Доска Почета"> Доска Почета</button></a>
     <a href="https://neverchaseprice.github.io/SiteTests1/GuildPro.html"><button><img src="images/Icon1.png" alt="Прочее"> Управление </button></a>
 </div>
+</div>
 
+<script>
+window.onload = function() {
+  // По умолчанию показываем информацию о "Гильдейцах" и переключаем переключатель
+  guildInfo.style.display = 'none';
+  guildNames.style.display = 'none';
+  achievementInfo.style.display = 'block';
+  achievementProjects.style.display = 'block';
+  switchToggle.checked = false; // задаем значение переключателя в положение "Гильдейцы"
+    };
+</script>
   
 
 <script>
