@@ -29,10 +29,10 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* чтобы кнопки не перекрывали контент */
+    min-height: 50vh; /* чтобы кнопки не перекрывали контент */
     background-color: #f4f4f4; /* Светло-серый фон */
     color: #333; /* Темный текст */
-    max-width: 600px; /* Максимальная ширина страницы */
+    max-width: 500px; /* Максимальная ширина страницы */
     margin: 0 auto; /* Центрирование страницы по горизонтали */
   }
   
@@ -69,11 +69,11 @@
     display: inline-flex; /* чтобы изображение и текст были в одной линии */
     align-items: center; /* выравнивание элементов по центру */
     justify-content: center; /* выравнивание элементов по центру */
-    font-size: 10px;
+    font-size: 8px;
     cursor: pointer;
-    padding: 5px 10px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
+    padding: 5px 5px; /* Уменьшаем внутренние отступы по вертикали и горизонтали */
     border-radius: 10px;
-    width: 90px; /* уменьшим ширину кнопок */
+    width: 60px; /* уменьшим ширину кнопок */
   }
   
   .bottom-menu button img {
