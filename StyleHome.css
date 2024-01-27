@@ -31,7 +31,9 @@ background-color: #f4f4f4; /* Светло-серый фон */
 color: #333; /* Темный текст */
 max-width: 500px; /* Максимальная ширина страницы */
 margin: 0 auto; /* Центрирование страницы по горизонтали */
+line-height: 1.5;
 }
+
 
 .container {
 flex: 1;
@@ -100,14 +102,6 @@ background-color: #102727;
 }
 }
 
-/*Дизайн элементов*/
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background-color: #f4f4f4; /* Светло-серый фон */
-    color: #333; /* Темный текст */
-}
-
 
 header { 
     background-color: #102727; /* Темно-зеленый фон для шапки */
@@ -150,7 +144,6 @@ section {
 .GeneralText{
     text-align: center;
     max-width: 600px;
-    margin: 0 auto;
     display: block; /* Делает изображение блочным элементом */
     margin: 0 auto; /* Центрирует изображение по горизонтали */
 }
@@ -171,20 +164,22 @@ footer {
     width: 100%; /* Обеспечиваем ширину подвала на всю ширину страницы */
     }
 
+
 #ton-connect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    position: fixed; /* Изменено на fixed чтобы элемент оставался на месте при прокрутке */
+    bottom: 90%; /* Устанавливаем расстояние от нижнего края */
+    left: 50%; /* Устанавливаем начальное горизонтальное положение */
+    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
+    text-align: center; /* Центрируем содержимое кнопки */
+    }
+    
 
 #ton-connect > button {
-  font-size: 16px;
+font-size: 16px;
+display: inline-block; /* Делаем кнопку блочным элементом для удобного центрирования */
 }
-
+    
 #ton-connect > button > span {
-  display: none; /* Скрыть оригинальный текст на кнопке */
+display: none; /* Скрыть оригинальный текст на кнопке */
 }
-
-
-
+    
