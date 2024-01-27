@@ -172,19 +172,19 @@ footer {
     }
 
 #ton-connect {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-    
-    #ton-connect > button {
-    font-size: 16px;
-    }
-    
-    #ton-connect > button > span {
-    display: none; /* Скрыть оригинальный текст на кнопке */
-    }
-    
+  position: relative; /* Изменили на relative для корректного позиционирования кнопки */
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); /* Использовали translateX для центрирования по горизонтали */
+}
+
+#ton-connect > button {
+  font-size: 16px;
+}
+
+#ton-connect > button > span {
+  display: none; /* Скрыть оригинальный текст на кнопке */
+}
+
 
 
