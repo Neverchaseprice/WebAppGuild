@@ -172,10 +172,10 @@ footer {
     }
 
 #ton-connect {
-  position: relative; /* Изменили на relative для корректного позиционирования кнопки */
-  top: 5%;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%); /* Использовали translateX для центрирования по горизонтали */
+  transform: translate(-50%, -50%);
 }
 
 #ton-connect > button {
