@@ -55,6 +55,7 @@ display: flex;
 justify-content: space-evenly; /* равномерное распределение кнопок */
 padding: 10px 0;
 z-index: 1000; /* Позволяет кнопкам оставаться поверх другого контента */
+background-color: #102727; 
 }
 
 .bottom-menu button {
