@@ -6,9 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="StyleHome.css">
   <title>Добро пожаловать в Гильдию!</title>
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 </head>
 
 <body>
+
+      <!-- Подключаем Ton Connect -->
+  <div id="ton-connect"></div>
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://https://neverchaseprice.github.io/WebAppGuild/tonconnect-manifest.json',
+        buttonRootId: 'ton-connect'
+    });
+  </script>
+
+  
   <div class="container">
     <h1>Добро пожаловать в Гильдию!</h1>
     <p>Вместе с ИИ мы достигаем невероятных результатов</p>
