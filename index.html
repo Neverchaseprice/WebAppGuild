@@ -11,15 +11,20 @@
 
 <body>
   <div id="ton-connect"></div>
+  <div id="language-select">
+    <select>
+      <option value="rus">Рус</option>
+      <option value="eng">Eng</option>
+    </select>
+  </div>
 
-
+  
   <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
         manifestUrl: 'https://neverchaseprice.github.io/WebAppGuild/tonconnect-manifest.json',
         buttonRootId: 'ton-connect'
     });
   </script>
-
 
   <div class="container">
     <br>
@@ -41,6 +46,7 @@
     </section>
 
     <br>
+
 
     <section class="about">
         <h2>Бизнес-спецназ Гильдии работает как следует</h2>
@@ -66,6 +72,9 @@
         <a href="Settings.html"><button><img src="images/Icon1.png" alt="Прочее"> Управление </button></a>
     </div>
   </div>
+
+
+
 
   
 </body>

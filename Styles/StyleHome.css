@@ -61,33 +61,32 @@ background-color: #102727;
 }
 
 .bottom-menu button {
-    background-color: #102727;
-    color: white;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: flex; /* Использовать flexbox */
-    flex-direction: column; /* рассположение элементов по вертикали */
-    align-items: center; /* выравнивание элементов по центру */
-    justify-content: center; /* выравнивание элементов по центру */
-    font-size: 9px;
-    cursor: pointer;
-    padding: 5px 5px;
-    border-radius: 10px;
-    width: 70px; /* задаем фиксированную ширину кнопок */
-    height: 45px; /* задаем фиксированную высоту кнопок */
-  }
+background-color: #102727;
+color: white;
+border: none;
+text-align: center;
+text-decoration: none;
+display: flex; /* Использовать flexbox */
+flex-direction: column; /* рассположение элементов по вертикали */
+align-items: center; /* выравнивание элементов по центру */
+justify-content: center; /* выравнивание элементов по центру */
+font-size: 9px;
+cursor: pointer;
+padding: 5px 5px;
+border-radius: 10px;
+width: 70px; /* задаем фиксированную ширину кнопок */
+height: 45px; /* задаем фиксированную высоту кнопок */
+}
   
-  .bottom-menu button img {
-    margin-bottom: 5px; /* добавляем отступ снизу для размещения иконки поверх текста */
-    height: 20px;
-    width: 20px;
-  }
+.bottom-menu button img {
+margin-bottom: 5px; /* добавляем отступ снизу для размещения иконки поверх текста */
+height: 20px;
+width: 20px;
+}
 
 .bottom-menu a {
     text-decoration: none; /* убираем подчеркивание текста на ссылках внутри .bottom-menu */
 }
-
 
 
 /* Медиа-запрос для мобильных устройств */
@@ -165,24 +164,95 @@ footer {
     }
 
 
-
 /* ДИЗАЙН ДЛЯ КНОПКИ TON CONNECT  */
-
 #ton-connect {
-    position: fixed; /* Изменено на fixed чтобы элемент оставался на месте при прокрутке */
-    bottom: 90%; /* Устанавливаем расстояние от нижнего края */
-    left: 50%; /* Устанавливаем начальное горизонтальное положение */
-    transform: translateX(-50%); /* Центрируем кнопку по горизонтали */
-    text-align: center; /* Центрируем содержимое кнопки */
-    }
-    
-    
+    position: fixed;
+    top: 5px; /* Отступ от верхнего края */
+    right: 720px; /* Отступ от правого края */
+    z-index: 1100; /* Уровень накладывания, чтобы оставалась поверх другого контента */
+}
+
 #ton-connect > button {
-font-size: 16px;
-display: inline-block; /* Делаем кнопку блочным элементом для удобного центрирования */
+    font-size: 18px;
+    display: inline-block;
+    color: white;
+    background-color: #102727;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
-    
+
 #ton-connect > button > span {
-display: none; /* Скрыть оригинальный текст на кнопке */
+    display: none;
 }
     
+.top-menu button {
+    background-color: #102727;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px; 
+}
+
+.top-menu button img {
+    margin-bottom: 10px; /* Увеличиваем отступ снизу для размещения иконки поверх текста */
+    height: 15px; /* Увеличиваем размер иконки в два раза */
+    width: 15px; /* Увеличиваем размер иконки в два раза */
+}
+
+.top-menu a {
+    text-decoration: none;
+}
+
+
+.hidden {
+    display: none;
+  }
+
+
+/* Стили для тени выпадающего списка */
+#language-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 70px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #102727;
+    border: none;
+    border-radius: 20px; /* Закругленные края для выпадающего списка */
+    transition: all 0.3s ease; /* Для плавного появления */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  #language-select {
+    position: fixed;
+    top: 5px; /* Отступ от верхнего края */
+    right: 890px; /* Отступ от правого края */
+    z-index: 1100; /* Уровень накладывания, чтобы оставалась поверх другого контента */
+}
+
+/* Стили для кнопки */
+button {
+font-size: 18px;
+display: inline-block;
+color: #333; /* Цвет текста */
+background-color: #f2f2f2; /* Цвет фона кнопки */
+border: none;
+padding: 10px 20px;
+border-radius: 10px;
+transition: all 0.3s ease; /* Плавное появление */
+cursor: pointer;
+}
