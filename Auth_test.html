@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка данных на сервер</title>
+</head>
+<body>
+    <form id="userDataForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        <br>
+        <button type="button" onclick="sendData()">Отправить данные</button>
+    </form>
+
+    <script>
+        function sendData() {
+            var name = document.getElementById("name").value;
+            var id = document.getElementById("id").value;
+
+            fetch('/profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({name: name, id: id}),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch((error) => {
+                console.error('Ошибка:', error);
+            });
+        }
+    </script>
+</body>
+</html>

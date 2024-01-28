@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка данных через форму</title>
+</head>
+
+
+<body>
+    <form id="myForm">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br><br>
+        <input type="button" value="Отправить" onclick="submitForm()">
+    </form>
+    
+
+    <script>
+        function submitForm() {
+            var formData = {
+                "name": document.getElementById("name").value,
+                "id": document.getElementById("id").value
+            };
+
+            fetch('http://127.0.0.1:8000/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>
