@@ -167,8 +167,8 @@ footer {
 /* ДИЗАЙН ДЛЯ КНОПКИ TON CONNECT  */
 #ton-connect {
     position: fixed;
-    top: 20px; /* Отступ от верхнего края */
-    right: 720px; /* Отступ от правого края */
+    top: 2%; /* Отступ от верхнего края */
+    right: 40%; /* Отступ от правого края */
     z-index: 1100; /* Уровень накладывания, чтобы оставалась поверх другого контента */
 }
 
@@ -239,20 +239,8 @@ footer {
   
   #language-select {
     position: fixed;
-    top: 20px; /* Отступ от верхнего края */
-    right: 890px; /* Отступ от правого края */
+    top: 2%; /* Отступ от верхнего края */
+    right: 50%; /* Отступ от правого края */
     z-index: 1100; /* Уровень накладывания, чтобы оставалась поверх другого контента */
 }
 
-/* Стили для кнопки */
-button {
-font-size: 18px;
-display: inline-block;
-color: #333; /* Цвет текста */
-background-color: #f2f2f2; /* Цвет фона кнопки */
-border: none;
-padding: 10px 20px;
-border-radius: 10px;
-transition: all 0.3s ease; /* Плавное появление */
-cursor: pointer;
-}
