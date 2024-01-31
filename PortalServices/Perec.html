@@ -1,0 +1,37 @@
+
+
+    <div class="block-container">
+
+        <div class="block-2" id="buttons">
+            <button onclick="showContent('content1')">Кнопка 1</button>
+            <button onclick="showContent('content2')">Кнопка 2</button>
+            <button onclick="showContent('content3')">Кнопка 3</button>
+        </div>
+
+        <div class="block-3" id="dynamicContent">
+            Изначальный контент
+        </div>
+        
+    </div>
+
+
+
+    <script>
+        function showContent(contentId) {
+            var content = document.getElementById('dynamicContent');
+            if (contentId === 'content1') {
+                content.innerHTML = 'Контент для кнопки 1';
+            } else if (contentId === 'content2') {
+                content.innerHTML = 'Контент для кнопки 2';
+            } else if (contentId === 'content3') {
+                content.innerHTML = 'Контент для кнопки 3';
+            }
+        }
+    </script>
+
+
+
+
+
+
+</html>

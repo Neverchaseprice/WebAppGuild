@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href="TestBlock.css">
+</head>
+
+<body>
+
+    <div class="block-container" id="warriorsSet">
+
+        <div class="block-2" id="warriorButtons">
+            <button onclick="showContent('warriorContent1')">Рыцари</button>
+            <button onclick="showContent('warriorContent2')">Пехота</button>
+            <button onclick="showContent('warriorContent3')">Кавалерия</button>
+        </div>
+
+        <div class="block-3" id="warriorContent">
+            Информация о средневековых воинах
+        </div>
+        
+    </div>
+
+    <div class="block-container" id="weaponsSet" style="display: none;">
+
+        <div class="block-2" id="weaponButtons">
+            <button onclick="showContent('weaponContent1')">Мечи</button>
+            <button onclick="showContent('weaponContent2')">Щиты</button>
+            <button onclick="showContent('weaponContent3')">Кувалды</button>
+        </div>
+
+        <div class="block-3" id="weaponContent">
+            Информация о средневековом оружии
+        </div>
+
+    </div>
+
+    <div class="block-container" id="armorSet" style="display: none;">
+
+        <div class="block-2" id="armorButtons">
+            <button onclick="showContent('armorContent1')">Легкие доспехи</button>
+            <button onclick="showContent('armorContent2')">Тяжелые доспехи</button>
+            <button onclick="showContent('armorContent3')">Средние доспехи</button>
+        </div>
+
+        <div class="block-3" id="armorContent">
+            Информация о средневековых доспехах
+        </div>
+
+    </div>
+
+    
+    <div>
+        <button onclick="switchContentSet('warriorsSet')">Средневековые воины</button>
+        <button onclick="switchContentSet('weaponsSet')">Средневековое оружие</button>
+        <button onclick="switchContentSet('armorSet')">Средневековые доспехи</button>
+    </div>
+
+
+    <script>
+    function showContent(contentId) {
+        const warriorContent = document.getElementById('warriorContent');
+        const weaponContent = document.getElementById('weaponContent');
+        const armorContent = document.getElementById('armorContent');
+
+    if (contentId.startsWith('warriorContent')) {
+        warriorContent.innerHTML = getContentText(contentId);
+        weaponContent.innerHTML = '';
+        armorContent.innerHTML = '';
+    } else if (contentId.startsWith('weaponContent')) {
+        warriorContent.innerHTML = '';
+        weaponContent.innerHTML = getContentText(contentId);
+        armorContent.innerHTML = '';
+    } else if (contentId.startsWith('armorContent')) {
+        warriorContent.innerHTML = '';
+        weaponContent.innerHTML = '';
+        armorContent.innerHTML = getContentText(contentId);
+    }
+}
+
+        function getContentText(contentId) {
+            // Ваша логика для получения информации о контенте для каждой кнопки
+        }
+
+        function switchContentSet(setId) {
+            const warriorSet = document.getElementById('warriorsSet');
+            const weaponSet = document.getElementById('weaponsSet');
+            const armorSet = document.getElementById('armorSet');
+
+            // Оставляем рамки блока по умолчанию неизменными
+            warriorSet.style.border = 'none';
+            weaponSet.style.border = 'none';
+            armorSet.style.border = 'none';
+
+            // Прячем все наборы
+            warriorSet.style.display = 'none';
+            weaponSet.style.display = 'none';
+            armorSet.style.display = 'none';
+
+            // Отображаем выбранный набор
+            const selectedSet = document.getElementById(setId);
+            selectedSet.style.display = 'block';
+        }
+
+    </script>
+
+
+</body>
+</html>

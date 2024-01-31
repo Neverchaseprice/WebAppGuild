@@ -179,33 +179,6 @@ section {
   }
 
 
-/* Стили для тени выпадающего списка */
-#language-select select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 70px;
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-    background-color: #102727;
-    border: none;
-    border-radius: 20px; /* Закругленные края для выпадающего списка */
-    transition: all 0.3s ease; /* Для плавного появления */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-  
-  #language-select {
-    position: fixed;
-    top: 2%; /* Отступ от верхнего края */
-    right: 50%; /* Отступ от правого края */
-    width: 10%;
-    z-index: 1100; /* Уровень накладывания, чтобы оставалась поверх другого контента */
-}
-
-
-
 /* Style the features section */
 .features {
     display: flex;
