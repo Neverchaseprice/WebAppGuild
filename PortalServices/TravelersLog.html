@@ -7,11 +7,15 @@
 </head>
 <body>
 
-    <h1>Воронка социальных инноваций</h1>
-    <h1>Дневник Развития Гильдейца</h1> 
+    <h1>Карта Развития Гильдейца</h1> 
+    <p>После прохождения каждого этапа развития в Гильдии вы получаете конкретный результат: 
+        получение результатов мотивирует.  
+    </p>
 
+    <P>Использование ИИ и регулярное общение с профессионалами дает поразительные результаты</p>
+        
 
-    <p>Ваш Прогресс Начинает Ускоряться!</p>
+    <p><strong>Ваш Прогресс в освоении Маневров</strong></p>
         <div class="exp-bar">
             <div class="exp-fill"></div>
             <div class="exp-ticks">
@@ -24,45 +28,59 @@
             <div class="exp-tick"></div>
         </div>
 
-    <p>Эти действия дают 80% результата за 20% усилий. Выберите интересующую Вас тему и выполняйте испытания. Лучше всего регулярно общаться с профессионалами и экспертами из вашей области.</p>
-        <div class="block-container">
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
+    <p>Журнал Развития собрал в себе наиболее эффективные действия, которые дают 80% результата за 20% усилий. 
+        Выберите интересующую вас тему и выполняйте испытания.</p> 
 
-            
-            <div class="block-container">
-                <div class="block-1-3">
-                        <div class="menu" id="buttons">
-                            <button onclick="showContent('content1')">Разработка</button>
-                            <button onclick="showContent('content2')">Нетворкинг</button>
-                            <button onclick="showContent('content3')">Консультации</button>
-                            <button onclick="showContent('content4')">Вклад в Знания</button>
-                            <button onclick="showContent('content5')">Лайфстайл</button>
-                        </div>
-                </div>
-                <div class="block-2-3">
-                    <div class="block-3" id="dynamicContent">
-                        Выберите направление развития в меню слева
+    <p><strong>Книга 1: Использование ИИ для повышения личной эффективности</strong></p>
+
+        <!-- Часть страницы с двумя блоками (Слева - Справа) -->
+        <div class="block-container">
+
+            <!-- Блок выбора Главы -->
+            <div class="block-1-3">
+                    <div class="menu" id="buttons">
+                        <button onclick="showContent('content1')">1. Примеры достижений ИИ</button>
+                        <button onclick="showContent('content2')">2. Личный AI-асистент</button>
+                        <button onclick="showContent('content3')">3. Интеграция с Yandex</button>
+                        <button onclick="showContent('content4')">4. Формирование базы Знаний</button>
+                        <button onclick="showContent('content5')">5. Лайфстайл</button>
                     </div>
+            </div>
+
+
+            <!-- Блок справа с содержанием Главы -->
+            <div class="block-2-3">
+                <div class="block-3" id="dynamicContent">
+                    Выберите Главу Развития в меню слева
                 </div>
             </div>
-    
+
+
+        </div>
+
 
         <script>
+            // Объект, хранящий данные о контенте
+            var contentData = {
+            content1: 'Квесты в разработке приложений',
+            content2: 'Челенджи в Нетвкоринге. 1. Познакомиться с 5 людьми из вашей профессиональной сферы',
+            content3: 'Консультации',
+            content4: 'Вики Гильдии: https://wiki.yandex.ru/arxiv-gildii/',
+            content5: 'Трансферная Судоходная Компания'
+            };
+
             function showContent(contentId) {
-                var content = document.getElementById('dynamicContent');
-                if (contentId === 'content1') {
-                    content.innerHTML = 'Квесты в разработке приложений';
-                } else if (contentId === 'content2') {
-                    content.innerHTML = 'Челенджи в Нетвкоринге. 1. Познакомиться с 5 людьми из вашей профессиональной сферы';
-                } else if (contentId === 'content3') {
-                    content.innerHTML = 'Консультации';
-                } else if (contentId === 'content4') {
-                    content.innerHTML = 'Вики Гильдии: https://wiki.yandex.ru/arxiv-gildii/';
-                } else if (contentId === 'content5') {
-                    content.innerHTML = 'Трансферная Судоходная Компания';
-                }
+            var content = document.getElementById('dynamicContent');
+            content.style.animation = 'none'; // Сбросим предыдущую анимацию, если она была запущена
+            content.style.opacity = 0; // Начальная прозрачность
+            content.style.height = '0'; // Начальная высота
+
+            setTimeout(function() {
+                content.innerHTML = contentData[contentId]; // Установим контент из объекта contentData
+                content.style.animation = 'expandHeight 0.5s ease'; // Устанавливаем анимацию для раскрытия контента
+                content.style.opacity = 1; // Делаем элемент видимым
+                content.style.height = 'auto'; // Задаем высоту на автоматическую
+            }, 50); // Задержка для перезапуска анимации
             }
         </script>
     

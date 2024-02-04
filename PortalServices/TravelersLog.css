@@ -73,7 +73,8 @@ body {
 
 .menu button {
     width: 100%;
-    margin: 13px 0; /* Уменьшаем расстояние между кнопками */
+    height: 60px;
+    margin: 8px 0; /* Уменьшаем расстояние между кнопками */
     padding: 20px; /* Уменьшаем высоту кнопок */
     background: #102727;
     border-radius: 10px;
@@ -81,7 +82,7 @@ body {
     cursor: pointer;
     color: #ffffff;
     border: none;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     line-height: 1; /* Изменение межстрочного интервала */
 }
@@ -97,15 +98,15 @@ body {
 }
 
 .block-1-3 {
-    width: calc(33.33% - 10px);
+    width: calc(35% - 10px);
     height: 400px;
     background-color: #11755769;
-    margin-right: 10px;
+    margin-right: 5px;
     box-sizing: border-box;
 }
 
 .block-2-3 {
-    width: calc(66.66% - 10px);
+    width: calc(65% - 10px);
     height: 400px;
     background-color: #b9b9b9;
     box-sizing: border-box;
@@ -129,3 +130,23 @@ body {
     cursor: pointer; /* Сделать указатель при наведении на блок */
 }
 
+
+
+/* Анимация появления текста Главы на странице Главы*/
+@keyframes expandHeight {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: auto;
+      opacity: 1;
+    }
+  }
+  
+  #dynamicContent {
+    height: auto; /* Установим начальную высоту на автоматическую */
+    overflow: hidden; /* Скрытие любого излишка */
+    animation: expandHeight 0.5s ease; /* Применим анимацию к элементу с id dynamicContent */
+  }
+  
